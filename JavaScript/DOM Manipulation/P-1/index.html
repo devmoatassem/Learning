@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM P-1</title>
+</head>
+<body>
+    <h1>Hey👋 I am playing with DOM</h1>
+    <table>
+        <tr>
+            <td>Hi!</td>
+            <td class="second">can</td>
+        </tr>
+        <tr>
+            <td>I</td>
+            <td class="second">Top</td>
+        </tr>
+        <tr>
+            <td id="thisisID">JavaScript</td>
+            <td class="second">prog.</td>
+        </tr>
+    </table>
+
+    <div class="all-div">First Div</div>
+    <!-- <script>
+        const comparison1 = document.querySelectorAll(".all-div");
+        console.log(comparison1)
+        const comparison2 = document.getElementsByClassName("all-div");
+        console.log(comparison2)
+    </script> -->
+    <div class="all-div">Second Div</div>
+    <ul>
+        <li>Winky winky</li>
+        <li>It's easy but new</li>
+        <li>hehe bro</li>
+    </ul>
+
+    <button id="p1" onclick="alert('Hehe boi u got pranked')">Click Me to know a secret</button>
+
+    <button id="p2" onclick=prank2()>Click Me to know another secret</button>
+
+    <button id="p3">Click again now pinky promise it's a secret</button>
+    <!-- Now let's fk with JavaScript -->
+    <script>
+        // console.log(document.documentElement); //here I get the whole HTML document and all of it's elements i.e head and body
+        // console.log(document.head);
+        // console.log(document.body);
+
+        //Childrens
+        // console.log(document.body.childNodes);// it shows all the children including empty spaces as a text
+        // console.log(document.body.children) ;// it only shows the children that we use in HTML (i.e h1,ul,script)
+        // for (node of document.body.children){
+        //     console.log(node)
+        // }
+
+        // console.log(document.body.firstChild); //it gives empty space text as child
+        // console.log(document.body.firstElementChild); //it gives h1 as first child
+        // console.log(document.body.lastElementChild); // it gives script as last tag
+
+        //Convert page elements to array
+        // const eleofPage = Array.from(document.body.children)//document.body.children is a collection but not array so in order to apply arrays methods we have to convert it to array
+        // console.log(eleofPage); //[h1,ul,script]
+
+        // Check Siblings
+        // const h1T= document.body.children[0];
+        // console.log(h1T.nextElementSibling);// ul
+        // console.log(h1T.nextSibling);//text
+        // const ulT= h1T.nextElementSibling;
+        // const li1 = ulT.children[0];
+        // console.log(ulT,li1)
+
+        //Table DOM manipulation
+        // const tabt = document.body.children[1]
+        // console.log(tabt.tBodies[0].rows)//array of rows
+        // console.log(tabt.tBodies[0].rows[0].style="background-color:blue;")
+        // console.log(tabt.tBodies[0].rows[1].style="background-color:green;")
+        // console.log(tabt.tBodies[0].rows[2].style="background-color:yellow;")
+        
+        // By ID or by Class Name
+        // const first = document.getElementById("thisisID")
+        // console.log(first.style="background-color:green;")
+
+        // const abc = document.getElementsByClassName("second")//it gives back array
+        // console.log(abc[0].style="background-color:red;");
+
+
+        // Querry selector
+        // const list = document.querySelector('tr > td')//inside we can pass like CSS = id, class name 
+        // console.log(list) //it gives the first element only
+
+        // const list2 = document.querySelectorAll(".second");
+        // console.log(list2)
+
+        
+        // in liene 26-31 
+        // console.log(comparison1)// we get by querryselector 
+        // console.log(comparison2)// we get by class selector
+        // conclusively when we use querry selector it select first querry and just exit but when we use select by ID or class it keeps running and when gives us second div too that comes after selection statement (so it's live and querryselector is static)
+
+        // an ID is global variable
+        // console.log(thisisID.id)
+        
+        // // Attribute acess
+        // console.log(thisisID.setAttribute("clicked","yes"))
+        // console.log(thisisID.attributes)//show total attributes
+        // console.log(thisisID.getAttribute("clicked"))
+        // console.log(thisisID.removeAttribute("clicked"))
+        // console.log(thisisID.hasAttribute("clicked"))//false
+        
+
+        // creating and removing elements
+    //     const newEle = document.createElement('div');
+        // const newEleTxt = document.createTextNode("Hehe my new text node")
+        // newEle.appendChild(newEleTxt)//add text to new div
+    //     newEle.textContent = "Hello again "//directly add text to new div without using new node
+    //     newEle.innerHTML= `<table>
+    //     <tr>
+    //         <td>Hi!</td>
+    //         <td class="second">can</td>
+    //     </tr>
+    //     <tr>
+    //         <td>I</td>
+    //         <td class="second">Top</td>
+    //     </tr>
+    //     <tr>
+    //         <td id="thisisID">JavaScript</td>
+    //         <td class="second">prog.</td>
+    //     </tr>
+    // </table>` //we can add table
+
+
+    //     const body = document.body;
+    //     body.append(newEle)//in the end of body
+        // body.prepend(newEle)//in the start of body
+        // body.before(newEle)// before body
+        // body.after(newEle)//after the body tag
+        //thisisID.replaceWith(newEle)//replace with new tag
+        // newEle.remove();//remove the new div
+
+
+        // Function to pass in to onclick event
+        // function prank2(){
+        //     alert("Hehe u fool now I am just passing a function")
+        // }
+        // function prank3(){
+        //     alert("U dumb now m using attribute manipulation in JavaScript")
+        // }
+        // // passing function to attribute
+        // p2.onclick=prank3
+
+        // Now using event listener
+        function prank4(event){
+            console.log(this)// it returns the whole element
+            alert("U dumb fk don't trust such fake promises")
+            //by default an event argument is passed in such function we can use some stuff below like this
+            console.log(event.type)
+            console.log(event.currentTarget)
+            console.log(event.clientX)
+            console.log(event.clientY)
+        }
+        const b3 = document.getElementById("p3")
+        b3.addEventListener('click',prank4)
+        // b3.removeEventListener('click',prank4)
+        // b3.addEventListener('click',function(){alert("Now m trying to pass refrenceless function")})
+        // b3.removeEventListener('click',function(){alert("Now m trying to pass refrenceless function")})// the way we pass function here it'll create adressles function so we can't remove event't listener in such case
+        // further by using eventlistener we can call multiple functions but in attribute case only the last one work
+
+
+        
+
+    </script>
+</body>
+</html>

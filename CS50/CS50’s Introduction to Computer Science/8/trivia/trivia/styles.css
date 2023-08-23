@@ -37,6 +37,11 @@ h1 {
     font-size: 48px;
 }
 
+.ans-buttons{
+    margin: 0 auto;
+    width: fit-content;
+  
+}
 button, input[type="submit"] {
     background-color: #d9edff;
     border: 1px solid transparent;
@@ -53,7 +58,7 @@ button, input[type="submit"] {
 
 input[type="text"] {
     line-height: 1.8;
-    width: 25%;
+    width: 55%;
 }
 
 input[type="text"]:hover {
