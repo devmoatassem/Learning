@@ -1,0 +1,70 @@
+body{
+    background-color: #93B1A6;
+}
+.heading{
+    color: white;
+}
+#profile-pic{
+    margin-top: 3%;
+    padding: 20px;
+    max-width: 350px;
+    
+}
+#profile-pic > img{
+    border-radius:  50%;
+    object-fit: cover;
+    border: 2px solid #040D12;
+}
+
+h2, h4{
+ color: #ffffff;
+}
+p{
+    text-align: justify;
+    padding: 6px;
+}
+.text-muted{
+    color: #183D3D!important;
+}
+.btn{
+    background-color: #040D12;
+    border-color: #040D12;
+    color: white;
+    border-color: #040D12;
+}
+.btn:hover{
+    background-color: #183D3D;
+    border-color: #183D3D;
+    color: white;
+}
+
+.col{
+    padding: 3%;
+}
+
+#SeeMoreButton{
+    width: 50%;
+    margin-bottom: 50px;
+}
+
+#contactform{
+    max-width: 500px;
+    padding-top: 50px;
+}
+#contactform textarea{
+    min-height: 200px;
+}
+#hobbieslist{
+    padding: 20px;
+}
+.accordion-button:not(.collapsed) {
+    color: #ffffff;
+    background-color: #040D12;
+    
+}
+@media (max-width: 768px){
+    h2, h4{
+        font-size: large;
+       } 
+}
+

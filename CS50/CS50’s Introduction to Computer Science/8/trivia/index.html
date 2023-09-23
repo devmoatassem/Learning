@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded',main);
+            function main(){
+                verifyMCQ(document.getElementsByClassName('ans-button'))
+                document.querySelector(".text-button").addEventListener('click',verifyText);
+                
+            }   
+            function verifyMCQ(buttonList){
+                for (var i = 0;i< buttonList.length; i++){
+                    let currentEle = buttonList[i];
+                    if (i==1){
+                        
+                        currentEle.addEventListener('click',function(){
+                            currentEle.style = "background-color: green;";
+                            showText("Correct!","warningText1");
+                        })
+                        
+                    }
+                    else{
+                        buttonList[i].addEventListener('click',function(){
+                            currentEle.style = "background-color: red;";
+                            showText("Incorrect","warningText1");
+                        })
+                    }
+                }
+            }
+
+
+            function showText(text,ID){
+                let object = document.getElementById(ID);
+                object.innerText= text;
+            }
+
+
+            function verifyText(){
+                let input = document.querySelector("input");
+                if (input.value === 'Global'){
+                    input.style = "background-color: green;";
+                    showText("Correct!","warningText2");
+                }
+                else{
+                    input.style = "background-color: red;";
+                    showText("Incorrect","warningText2");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3> In the context of programming, what does the acronym "API" stand for?</h3>
+                
+                <button class="ans-button">Advanced Programming Interface</button>
+                <button class="ans-button">Application Programming Interface</button>
+                <button class="ans-button">Algorithmic Programming Integration</button>
+                <button class="ans-button">Automated Program Implementation</button>
+                <p id="warningText1"></p>
+                
+                
+                
+                <!-- Correct Answer: B) Application Programming Interface -->
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the term for a variable that is accessible and usable throughout the entire program?</h3>
+                <input type="text">
+                <button class="text-button">Submit</button>
+                <p id="warningText2"></p>
+                
+            </div>
+        </div>
+    </body>
+</html>
