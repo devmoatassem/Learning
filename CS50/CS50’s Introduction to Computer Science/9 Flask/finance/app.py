@@ -20,13 +20,11 @@ app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
 
-print("Hello")
 create_user_db("test1","finance")
-print("hello")
+
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///user-databases/test1/finance.db")
 db.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, hash TEXT NOT NULL, cash NUMERIC NOT NULL DEFAULT 10000.00)")
-db.execute("CREATE TABLE IF NOT EXISTS sqlite_sequence(name,seq)")
 db.execute("CREATE UNIQUE INDEX IF NOT EXISTS username ON users (username)")
 # userdbcon = None
 # print(session.get("user_id"))
