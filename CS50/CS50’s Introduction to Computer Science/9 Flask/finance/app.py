@@ -19,8 +19,15 @@ app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
 Session(app)
 
+
+print("Hello")
+create_user_db("test1","finance")
+print("hello")
 # Configure CS50 Library to use SQLite database
-db = SQL("sqlite:///finance.db")
+db = SQL("sqlite:///user-databases/test1/finance.db")
+db.execute("CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, username TEXT NOT NULL, hash TEXT NOT NULL, cash NUMERIC NOT NULL DEFAULT 10000.00)")
+db.execute("CREATE TABLE IF NOT EXISTS sqlite_sequence(name,seq)")
+db.execute("CREATE UNIQUE INDEX IF NOT EXISTS username ON users (username)")
 # userdbcon = None
 # print(session.get("user_id"))
 
@@ -265,10 +272,10 @@ def register():
             userdbcon = SQL(f"sqlite:///user-databases/{id}/{username}.db")
         # SQL commands to create dashboard table and history table
         userdbcon.execute(
-            "CREATE TABLE dashboard (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, name TEXT NOT NULL, shares INTEGER NOT NULL)"
+            "CREATE TABLE IF NOT EXISTS dashboard (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, name TEXT NOT NULL, shares INTEGER NOT NULL)"
         )
         userdbcon.execute(
-            "CREATE TABLE history (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, name TEXT NOT NULL, shares INTEGER NOT NULL, price NUMERIC NOT NULL, date TEXT NOT NULL)"
+            "CREATE TABLE IF NOT EXISTS history (id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, symbol TEXT NOT NULL, name TEXT NOT NULL, shares INTEGER NOT NULL, price NUMERIC NOT NULL, date TEXT NOT NULL)"
         )
 
         # Redirect user to home page

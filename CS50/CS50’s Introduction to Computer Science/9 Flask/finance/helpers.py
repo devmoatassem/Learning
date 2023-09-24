@@ -86,6 +86,7 @@ def create_user_db(id,username):
     if not os.path.exists(directory_path):
         os.makedirs(f"user-databases/{id}")
         conn = sqlite3.connect(f"user-databases/{id}/{username}.db")
+        
         # Close the database connection when done
         conn.close()
         return True
