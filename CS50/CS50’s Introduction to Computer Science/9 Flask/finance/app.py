@@ -338,3 +338,6 @@ def sell():
 
     return render_template("sell.html", symbols=symbols)
     # return apology("TODO")
+
+if __name__ == "__main__":
+    app.run(debug=False)
