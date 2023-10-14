@@ -1,12 +1,25 @@
-my_list = [{'symbol': 'A'}, {'symbol': 'AAPL'}, {'symbol': 'Z'}]
 
-# Value to check for existence
-value_to_check = "Q"
+import os
+import sqlite3
 
-# Iterate through the list of dictionaries
-for dictionary in my_list:
-    if "symbol" in dictionary and dictionary["symbol"] == value_to_check:
-        print(f"The value '{value_to_check}' exists in the list.")
-        break
-else:
-    print(f"The value '{value_to_check}' does not exist in the list.")
+
+def create_user_db(path,id,username):
+    try:
+        directory_path = (f"{path}/{id}")
+        if not os.path.exists(directory_path):
+            os.makedirs(f"{path}/{id}")
+            conn = sqlite3.connect(f"{path}/{id}/{username}.db")
+            
+            # Close the database connection when done
+            conn.close()
+            return True
+        elif not os.path.exists(f"{directory_path}/{username}.db") and os.path.exists(directory_path):
+            conn = sqlite3.connect(f"{path}/{id}/{username}.db")
+            conn.close()
+            return True
+        else:
+            return False
+    except Exception as e:
+        return print(e)
+
+create_user_db("../Database/user-databases",1,"test2o1")
