@@ -14,5 +14,5 @@
 13. Demonstrate how to manipulate image assets using reference paths
 14. Explain the folder structure of a React project in terms of embedded or referenced assets
 15. Demonstrate the conditional implementation and rendering of multiple components
-15. Create and implement a route in the form of a navbar
-16. Describe navigation design in React, with a focus on single and multi-page navigation
+16. Create and implement a route in the form of a navbar
+17. Describe navigation design in React, with a focus on single and multi-page navigation
