@@ -62,7 +62,9 @@ import {
           <button onClick={resetInput}>Reset Input</button> 
           <button onClick={resetResult}>Reset Result</button> 
         </form> 
+      
       </div> 
+      
     ); 
   } 
    
