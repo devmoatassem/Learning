@@ -1,5 +1,6 @@
 import DessertsList from './components/DessertsList'
 import './App.css'
+import FormMani from './components/FormMani';
 
 const desserts = [
   {
@@ -30,8 +31,8 @@ function App() {
 
   return (
     <>
-    <h2>List of low calorie desserts:</h2>
-    <DessertsList data={desserts} />
+    {/* <h2>Hhh</h2> */}
+    <FormMani/>
     </>
     
   )
