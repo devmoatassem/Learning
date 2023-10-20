@@ -41,9 +41,9 @@
   color: #888;
 }
 
-body{
+/* body{
   background-color: #000000aa;
-}
+} */
 .App {
   display: flex;
   flex: 1;
@@ -123,3 +123,5 @@ button[disabled] {
   color: #666666;
   cursor: not-allowed;
 }
+
+

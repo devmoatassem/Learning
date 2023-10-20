@@ -1,6 +1,12 @@
-import DessertsList from './components/DessertsList'
 import './App.css'
+import { useContext } from 'react';
 import FormMani from './components/FormMani';
+import Switch from './components/Switch';
+import ThemeContext from './context/ThemeContext';
+
+
+
+
 
 const desserts = [
   {
@@ -27,14 +33,15 @@ const desserts = [
 
 
 function App() {
-  
+  const {theme, setTheme} = useContext(ThemeContext)
 
   return (
-    <>
-    {/* <h2>Hhh</h2> */}
+    <div id='root'
+    style={{backgroundColor :theme? "black":"white", color:theme?"white":"black"}}>
+      <Switch/>
     <FormMani/>
-    </>
-    
+   
+    </div>
   )
 }
 

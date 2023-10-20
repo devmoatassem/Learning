@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { validateEmail } from "../utils/validateEmail";
 
+
 function FormMani(){
     const [forminp,setForminp] = useState({
         name:"",
@@ -43,6 +44,8 @@ function FormMani(){
     };
   return (
     <div className="App">
+
+      
       <form onSubmit={handleSubmit}>
         <fieldset>
           <h2>Sign Up</h2>
