@@ -4,7 +4,7 @@
 const makeApiCall = (time)=>{
     return new Promise((resolve,reject)=>{
         setTimeout(()=>{
-            resolve("API done in time = "+ time)
+            resolve("API done in time = "+  time)
         },time)
     })
 }
