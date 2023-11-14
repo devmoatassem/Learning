@@ -1,20 +1,24 @@
 const http = require("http")
 require("dotenv").config();
+const getdata = require("./functions/get-req")
+let users = require("./data/user.json")
 
 
 const PORT = process.env.PORT;
 const server = http.createServer((req, res) => {
+    req.users = users;
     switch (req.method) {
         case "POST":
             break;
         case "GET":
+            getdata(req,res);
             break;
         case "PUT":
             break;
         case "DELETE":
             break
         default:
-            res.statusCode = 200;
+            res.statusCode = 404;
             res.setHeader("Content-Type", "application/json");
             res.write(JSON.stringify({ title: "404 error" , message: "Can't find the route"}))
             res.end();
