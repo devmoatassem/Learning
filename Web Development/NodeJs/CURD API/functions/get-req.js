@@ -20,7 +20,7 @@ module.exports = (req, res) => {
         // console.log(req.users,idp,a)
     }
     
-    console.log(baseURL, req.url, id)
+    // console.log(baseURL, req.url, id)
 
     if (req.url === "/api/users") {
         res.statusCode = 200;
