@@ -1,6 +1,8 @@
 const http = require("http")
 require("dotenv").config();
 const getdata = require("./functions/get-req")
+const postdata = require("./functions/post-req")
+
 let users = require("./data/user.json")
 
 
@@ -9,6 +11,7 @@ const server = http.createServer((req, res) => {
     req.users = users;
     switch (req.method) {
         case "POST":
+            postdata(req,res);
             break;
         case "GET":
             getdata(req,res);
