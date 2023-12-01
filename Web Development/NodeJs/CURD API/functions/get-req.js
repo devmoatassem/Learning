@@ -1,3 +1,4 @@
+
 module.exports = (req, res) => {
     let baseURL = req.url.substring(0, req.url.lastIndexOf("/") + 1);
     // so here lastIndex tell me at what index of my url I have a "/" in my URL and then we pass that to sub string method that slice string from that position

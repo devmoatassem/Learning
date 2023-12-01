@@ -6,7 +6,7 @@ module.exports = (async (req, res) => {
     if (req.url === "/api/users") {
         try {
             let body = await requestBodyParser(req);
-            body.id = crypto.randomUUID();
+            body._id = crypto.randomUUID();
             req.users.push(body);
             writeTo(req.users)
             res.writeHead(201, { "Content-Type": "application/json" })
