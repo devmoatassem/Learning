@@ -36,7 +36,7 @@ module.exports = (req, res) => {
         res.end(JSON.stringify({ header: "Bad ID Request", message: "Can't find the movie :(" }));
     }
     else if (regex4.test(id) && baseURL === "/api/users/") {
-        res.statusCode = 200;
+        res.statusCode = 204;
         res.setHeader("Content-Type", "application/json");
         res.write(JSON.stringify(movieFilter(id)? req.users:{ header: "ID not Found", message: "Can't find the movie :(" }))
         res.end();
