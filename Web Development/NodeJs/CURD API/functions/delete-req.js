@@ -14,7 +14,7 @@ module.exports = (req, res) => {
     function movieFilter(idp){
 
         const index = req.users.findIndex((user) => {
-            return user._id===idp;
+            return user.id===idp;
         })
         if (index===-1){
             return false;

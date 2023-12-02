@@ -9,7 +9,7 @@ module.exports = (req, res) => {
     function movieFilter(idp){
         
         const a = req.users.filter((user)=>{
-            return user._id===idp;
+            return user.id===idp;
         })
         if (a.length>0){
             return a;

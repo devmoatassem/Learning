@@ -21,6 +21,7 @@ const server = http.createServer((req, res) => {
             break;
         // 
         case "PUT":
+            putdata(req,res);
             break;
         
         case "DELETE":
