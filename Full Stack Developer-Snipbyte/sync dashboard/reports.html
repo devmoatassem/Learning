@@ -142,6 +142,7 @@
 
         <!-- cards section starts  -->
         <div class="md:flex  items-stretch gap-6 justify-between">
+            <!-- Main Chart Starts -->
             <div class="w-full md:w-[70%] md:max-h-[65vh] border border-gray-200  my-2 md:my-6 p-5 rounded-2xl">
                 <div class="flex justify-between items-center mb-5">
                     <div class="gap-y-2">
@@ -160,7 +161,9 @@
                     <canvas id="bar-chart" class="w-full max-h-[300px]"></canvas>
                 </div>
             </div>
+            <!-- Main Chart Ends -->
 
+            <!-- Side info card starts -->
             <div class="w-full md:w-[30%] md:max-h-[65vh] border border-gray-200  my-2 md:my-6 p-5 rounded-2xl">
                 <div class="flex justify-between items-center">
                     <h3 class="text-base md:text-lg font-bold">Employment Status</h3>
@@ -239,296 +242,307 @@
 
 
             </div>
+            <!-- Side info card ends -->
 
         </div>
-        <div class="">
-            <div class="overflow-auto border border-gray-200  rounded-2xl">
+        <!-- cards section ends  -->
 
-                <table class="w-full text-left text-gray-600 overflow-x-auto">
-                    <caption class="p-5">
-                        <div class="md:flex md:justify-between items-center mb-5">
-                            <div class="gap-y-2 text-left">
-                                <p class="text-xs text-gray-600">All activities</p>
-                                <h3 class="ttext-base md:text-lg font-bold text-gray-900">Employee Attendance</h3>
-                            </div>
-                            <div class="flex gap-1 md:gap-2 mt-4 md:mt-0">
-                                <div class="px-2 md:px-4 py-1 md:py-2">
-                                    <i class="fa-solid fa-magnifying-glass text-gray-600 mt-1 md:text-xl"></i>
-                                </div>
-                                <div
-                                    class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
-                                    <i class="fa-solid fa-filter text-gray-600"></i>
-                                    <span class="font-semibold">Filters</span>
-                                </div>
-                                <div
-                                    class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
-                                    <i class="fa-solid fa-arrow-up-from-bracket text-gray-600"></i>
-                                    <span class="font-semibold">Export</span>
-                                </div>
-                                <div
-                                    class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
-                                    <i class="fa-solid fa-circle-plus text-gray-600"></i>
-                                    <span class="font-semibold">View report</span>
-                                </div>
-                            </div>
+        <!-- table section starts  -->
+        <div class="overflow-auto border border-gray-200  rounded-2xl">
 
+            <table class="w-full text-left text-gray-600 overflow-x-auto">
+                <!-- Table caption starts here -->
+                <caption class="p-5">
+                    <div class="md:flex md:justify-between items-center mb-5">
+                        <div class="gap-y-2 text-left">
+                            <p class="text-xs text-gray-600">All activities</p>
+                            <h3 class="ttext-base md:text-lg font-bold text-gray-900">Employee Attendance</h3>
                         </div>
-                    </caption>
-                    <thead class="py-4 bg-gray-100 table-header-group text-gray-900 text-sm text-left">
-                        <tr>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
+                        <div class="flex gap-1 md:gap-2 mt-4 md:mt-0">
+                            <div class="px-2 md:px-4 py-1 md:py-2">
+                                <i class="fa-solid fa-magnifying-glass text-gray-600 mt-1 md:text-xl"></i>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
+                                <i class="fa-solid fa-filter text-gray-600"></i>
+                                <span class="font-semibold">Filters</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
+                                <i class="fa-solid fa-arrow-up-from-bracket text-gray-600"></i>
+                                <span class="font-semibold">Export</span>
+                            </div>
+                            <div
+                                class="flex items-center gap-2 border border-gray-200 px-3 md:px-4 py-1 md:py-2 rounded-full text-sm">
+                                <i class="fa-solid fa-circle-plus text-gray-600"></i>
+                                <span class="font-semibold">View report</span>
+                            </div>
+                        </div>
 
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Name</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Status</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Date</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Check in</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Check out</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Schedule in</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                            <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <span class="font-semibold">Schedule out</span>
-                                    <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
-                                </div>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white text-gray-400 text-sm ">
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-10 h-10">
-                                        <img class="rounded-full"
-                                            src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900 text-sm">John Doe</div>
-                                        <span class="text-sm">Lead Engineer</span>
-                                    </div>
+                    </div>
+                </caption>
+                <!-- Table caption ends here -->
 
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-xs text-purple-600"></i>
-                                    <p>Full-time</p>
+                <!-- Table header starts here -->
+                <thead class="py-4 bg-gray-100 table-header-group text-gray-900 text-sm text-left">
+                    <tr>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Name</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Status</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Date</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Check in</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Check out</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Schedule in</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                        <th scope="col" class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <span class="font-semibold">Schedule out</span>
+                                <i class="fa-solid fa-angle-down text-gray-600 mt-1"></i>
+                            </div>
+                        </th>
+                    </tr>
+                </thead>
+                <!-- Table header ends here -->
+
+                <!-- Table body starts here -->
+                <tbody>
+                    <tr class="bg-white text-gray-400 text-sm ">
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10">
+                                    <img class="rounded-full"
+                                        src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
+                                        alt="">
                                 </div>
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                2023-11-13
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 17:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td class="px-2 py-2 md:px-4 md:py-4">
-                        </tr>
-                        <tr class="bg-white text-gray-400 text-sm ">
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-10 h-10">
-                                        <img class="rounded-full"
-                                            src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900 text-sm">John Doe</div>
-                                        <span class="text-sm">Lead Engineer</span>
-                                    </div>
-
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-xs text-purple-600"></i>
-                                    <p>Full-time</p>
+                                <div>
+                                    <div class="font-semibold text-gray-900 text-sm">John Doe</div>
+                                    <span class="text-sm">Lead Engineer</span>
                                 </div>
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                2023-11-13
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 17:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td class="px-2 py-2 md:px-4 md:py-4">
-                        </tr>
-                        <tr class="bg-white text-gray-400 text-sm ">
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-10 h-10">
-                                        <img class="rounded-full"
-                                            src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900 text-sm">John Doe</div>
-                                        <span class="text-sm">Lead Engineer</span>
-                                    </div>
 
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-xs text-purple-600"></i>
-                                    <p>Full-time</p>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-xs text-purple-600"></i>
+                                <p>Full-time</p>
+                            </div>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            2023-11-13
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 17:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td class="px-2 py-2 md:px-4 md:py-4">
+                    </tr>
+                    <tr class="bg-white text-gray-400 text-sm ">
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10">
+                                    <img class="rounded-full"
+                                        src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
+                                        alt="">
                                 </div>
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                2023-11-13
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 17:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td class="px-2 py-2 md:px-4 md:py-4">
-                        </tr>
-                        <tr class="bg-white text-gray-400 text-sm ">
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-10 h-10">
-                                        <img class="rounded-full"
-                                            src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900 text-sm">John Doe</div>
-                                        <span class="text-sm">Lead Engineer</span>
-                                    </div>
-
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-xs text-purple-600"></i>
-                                    <p>Full-time</p>
+                                <div>
+                                    <div class="font-semibold text-gray-900 text-sm">John Doe</div>
+                                    <span class="text-sm">Lead Engineer</span>
                                 </div>
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                2023-11-13
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 17:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td class="px-2 py-2 md:px-4 md:py-4">
-                        </tr>
-                        <tr class="bg-white text-gray-400 text-sm ">
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <input type="checkbox">
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="flex items-center gap-2">
-                                    <div class="w-10 h-10">
-                                        <img class="rounded-full"
-                                            src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
-                                            alt="">
-                                    </div>
-                                    <div>
-                                        <div class="font-semibold text-gray-900 text-sm">John Doe</div>
-                                        <span class="text-sm">Lead Engineer</span>
-                                    </div>
 
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
-                                    <i class="fa-solid fa-circle text-xs text-purple-600"></i>
-                                    <p>Full-time</p>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-xs text-purple-600"></i>
+                                <p>Full-time</p>
+                            </div>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            2023-11-13
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 17:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td class="px-2 py-2 md:px-4 md:py-4">
+                    </tr>
+                    <tr class="bg-white text-gray-400 text-sm ">
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10">
+                                    <img class="rounded-full"
+                                        src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
+                                        alt="">
                                 </div>
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                2023-11-13
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 17:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td>
-                            <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
-                                <i class="fa-regular fa-clock"></i> 09:00
-                            </td class="px-2 py-2 md:px-4 md:py-4">
-                        </tr>
-                    </tbody>
-                </table>
+                                <div>
+                                    <div class="font-semibold text-gray-900 text-sm">John Doe</div>
+                                    <span class="text-sm">Lead Engineer</span>
+                                </div>
+
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-xs text-purple-600"></i>
+                                <p>Full-time</p>
+                            </div>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            2023-11-13
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 17:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td class="px-2 py-2 md:px-4 md:py-4">
+                    </tr>
+                    <tr class="bg-white text-gray-400 text-sm ">
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10">
+                                    <img class="rounded-full"
+                                        src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
+                                        alt="">
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 text-sm">John Doe</div>
+                                    <span class="text-sm">Lead Engineer</span>
+                                </div>
+
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-xs text-purple-600"></i>
+                                <p>Full-time</p>
+                            </div>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            2023-11-13
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 17:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td class="px-2 py-2 md:px-4 md:py-4">
+                    </tr>
+                    <tr class="bg-white text-gray-400 text-sm ">
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <input type="checkbox">
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="flex items-center gap-2">
+                                <div class="w-10 h-10">
+                                    <img class="rounded-full"
+                                        src="https://www.shutterstock.com/image-vector/male-default-placeholder-avatar-profile-260nw-387516193.jpg"
+                                        alt="">
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-900 text-sm">John Doe</div>
+                                    <span class="text-sm">Lead Engineer</span>
+                                </div>
+
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <div class="text-xs bg-purple-100 w-fit py-1 px-2 rounded-full flex items-center gap-2">
+                                <i class="fa-solid fa-circle text-xs text-purple-600"></i>
+                                <p>Full-time</p>
+                            </div>
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            2023-11-13
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 17:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td>
+                        <td class="px-2 py-2 md:px-4 md:py-4 whitespace-nowrap">
+                            <i class="fa-regular fa-clock"></i> 09:00
+                        </td class="px-2 py-2 md:px-4 md:py-4">
+                    </tr>
+                </tbody>
+                <!-- Table body ends here -->
+            </table>
 
 
-            </div>
         </div>
-
-
+        <!-- table section ends  -->
     </div>
+
+    <!-- JavaScript Section of ChartJs Starts Here -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script>
@@ -546,8 +560,7 @@
         blueGradient.addColorStop(0, 'rgba(0, 0, 129, 1)'); // Dark blue color
         blueGradient.addColorStop(0.1, 'rgba(0, 0, 129, 1)'); // Dark blue color (same as start)
         blueGradient.addColorStop(1, 'rgba(255, 255, 255, 1)'); // White color
-        // background: rgb(0,0,129);
-        // background: linear-gradient(180deg, rgba(0,0,129,1) 10%, rgba(255,255,255,1) 100%);
+
         // Create gradient for green color
         const greenGradient = chart.createLinearGradient(0, 0, 0, 100);
         greenGradient.addColorStop(0, 'rgba(75, 192, 192, 1)'); // Green color
