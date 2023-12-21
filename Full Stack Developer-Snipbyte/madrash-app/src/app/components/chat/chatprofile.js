@@ -43,4 +43,4 @@ const Chatprofile = ({ profile = "/b.jpg",
     )
 }
 
-export default Chatprofile
+export default Chatprofile;
