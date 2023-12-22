@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Tablerows = ({ tabledata ,key }) => {
+const Tablerows = ({ tabledata }) => {
 
     return (
         <>
-            <tr key={key} className="bg-white text-gray-900 text-sm font-semibold ">
+            <tr className="bg-white text-gray-900 text-sm font-semibold ">
                 <td className="px-2 py-2 md:px-3 md:py-4 whitespace-nowrap">
                     <div className="flex items-center gap-2">
                         <input type="checkbox" />

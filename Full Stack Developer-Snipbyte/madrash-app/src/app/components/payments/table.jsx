@@ -74,8 +74,8 @@ const Table = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {tabledata.map((data)=>{
-                            return <Tablerows tabledata={data} />
+                        {tabledata.map((data,index)=>{
+                            return <Tablerows tabledata={data} key={index} />
                         })}
 
                     </tbody>
