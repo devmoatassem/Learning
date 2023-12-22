@@ -36,10 +36,6 @@ const ClassPage = () => {
                 <Assignments />
 
             </div>
-
-
-
-
         </div>
     )
 }
