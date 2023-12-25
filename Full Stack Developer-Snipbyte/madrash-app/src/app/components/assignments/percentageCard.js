@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 
 const PercentageCard = ( 
@@ -19,7 +18,7 @@ const PercentageCard = (
     return (
         <div className='flex flex-col items-center p-5 border rounded-xl'>
             <div className='flex items-center gap-4 mb-4'>
-                <div className={'w-5 h-5 '+((percentage<=40)?'bg-red-600':(percentage<=70)? 'bg-yellow-600': 'bg-green-600')+' rounded-md'}></div>
+                <div className={'w-5 h-5 '+((percentage<=40)?'bg-red-600':(percentage<=70)? 'bg-yellow-300': 'bg-green-600')+' rounded-md'}></div>
                 <div className='mt-0.5 font-bold text-sm'>{dataType}</div>
             </div>
             {/* Handling circular progress bar */}
