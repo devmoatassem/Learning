@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+// changed reactStrictMode to false to allow the use of calander
+const nextConfig = {
+    reactStrictMode: false,
+  };
 
 module.exports = nextConfig
