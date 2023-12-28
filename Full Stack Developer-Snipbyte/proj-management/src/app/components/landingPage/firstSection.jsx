@@ -9,20 +9,20 @@ const icons = [
 
 ]
 
-const text = "lorem ipsum dolor sit amet cflex flex-col items-center justify-center p-11 bg-white rounded-lg shadow-lg my-10 flex flex-col items-center justify-center p-11 bg-white rounded-lg shadow-lg my-10"
+
 
 const Section = () => {
-    const dummy = " eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"
+    const dummy = "Eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"
     return (
-        <div className='bg-bggrey w-full h-full flex flex-col items-center justify-center px-36'>
+        <div className='bg-bggrey w-full h-full flex flex-col items-center justify-center px-36 py-28'>
             <div className='text-btpurple font-medium py-3'># Installing and Enjoying Process</div>
             <div className='w-[40vw]'>
                 <Headers title='Save time working with Appilo Zone' description={dummy} customClass='text-bgdark-grey text-center' headingColor="text-btpurple" />
             </div>
             <div className='md:grid grid-cols-3 gap-6 justify-between'>
-                <SpecificationCard icon={icons[0]} decription={text} iconColor="bg-btpink fill-btpink"/>
-                <SpecificationCard icon={icons[1]} decription={text} iconColor="bg-btgreen fill-btgreen"/>
-                <SpecificationCard icon={icons[2]} decription={text} iconColor="bg-btyellow fill-btyellow"/>
+                <SpecificationCard icon={icons[0]} decription={dummy} iconColor="bg-btpink fill-btpink"/>
+                <SpecificationCard icon={icons[1]} decription={dummy} iconColor="bg-btgreen fill-btgreen"/>
+                <SpecificationCard icon={icons[2]} decription={dummy} iconColor="bg-btyellow fill-btyellow"/>
             </div>
         </div>
     )

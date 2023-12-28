@@ -3,7 +3,7 @@ import React from 'react'
 const SpecificationCard = ({icon,iconColor,title="Title", decription="This is description "}) => {
   return (
     <div className='flex flex-col gap-3 items-center justify-center p-11 bg-white rounded-xl shadow-lg my-10'>
-        <div className={iconColor+' w-8 p-1 bg-opacity-20 rounded-full'}>
+        <div className={iconColor+' flex items-center w-8 h-8 p-1 bg-opacity-20 rounded-full'}>
             {icon}
         </div>
 
