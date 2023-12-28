@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import React from 'react'
 import { FaArrowRight } from "react-icons/fa6";
 import { FaAngleUp } from "react-icons/fa6";
@@ -11,7 +12,7 @@ const InfoAccordian = ({ title, description, link }) => {
     setOpen(!open);
   };
   return (
-    <div className='flex items-start gap-3 p-5 shadow-lg drop-shadow-lg rounded-lg w-[500px] border'>
+    <div className='flex items-start gap-3 p-5 shadow-lg drop-shadow-lg rounded-lg w-full border'>
       <div className='text-2xl mt-1'>
         <button onClick={handleClick}>{open ? <FaAngleUp /> : <FaAngleDown />}</button>
       </div>
@@ -22,15 +23,15 @@ const InfoAccordian = ({ title, description, link }) => {
             <div className='text-bgdark-grey text-left text-sm py-2'>
               {description}
             </div>
-            {/* A link can be added below */}
-            <div className='flex items-center gap-2 text-sm'>
+            <Link href={link} className='flex items-center gap-2 text-sm'>
+
               <div className=' text-btgreen'>
                 Learn More
               </div>
               <div>
                 <FaArrowRight />
               </div>
-            </div>
+            </Link>
           </>
           : null
         }

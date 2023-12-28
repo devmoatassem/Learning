@@ -10,17 +10,20 @@ const LastSection = () => {
             <div className='w-[40vw]'>
                 <Headers title='Save time working with Appilo Zone' description={dummy} customClass='text-bgdark-grey text-center' headingColor="text-btpurple" />
             </div>
-            <div className='md:flex'>
+            <div className='md:flex w-full'>
                 <div className='md:w-1/2'>
                     image
                 </div>
-                <div className='md:w-1/2 px-20 space-y-10'>
-                    <InfoAccordian title={"Title"} description={dummy}/>
-                    <InfoAccordian title={"Title"} description={dummy}/>
+                <div className='md:w-1/2 space-y-10'>
+                    <div className='w-full'>
+                        <InfoAccordian title={"Title "} description={dummy} link={"/"} />
+                    </div>
+
+                    <InfoAccordian title={"Title"} description={dummy} link={"/"} />
                 </div>
             </div>
-            <div>
-                <PartnersList/>
+            <div className='mt-10'>
+                <PartnersList />
             </div>
         </div>
     )
