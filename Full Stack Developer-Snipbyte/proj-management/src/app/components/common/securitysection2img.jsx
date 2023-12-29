@@ -31,6 +31,8 @@ const Section2img = () => {
                     </div>
                     <div className='font-bold text-lg border-2 rounded-md p-0.5'><IoIosArrowDown /></div>
                 </div>
+
+
                 <div className='flex flex-col items-center bg-white w-fit px-10 py-4 rounded-md absolute top-32'>
                     <div className='text-sm font-bold'>Visitors</div>
                     <div className='text-xs font-light pb-2'>avrg</div>
@@ -40,6 +42,10 @@ const Section2img = () => {
                         <div><IoIosArrowDown /></div>
                     </div>
                 </div>
+
+                <div className='w-2 h-2 bg-btgreen rounded-full absolute top-20 left-10'></div>
+                <div className='w-3 h-3 bg-[#b6f3e1] rounded-full absolute top-15'></div> 
+                <div className='w-2 h-2 bg-orange-400 rounded-full absolute top-0'></div> 
             </div>
 
 
