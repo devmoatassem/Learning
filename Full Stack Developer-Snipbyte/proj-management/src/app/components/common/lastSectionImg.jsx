@@ -1,62 +1,80 @@
 'use client';
-import React from 'react'
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
+import React from 'react'
+import StatsCard from './lastSectionImg/statsCard';
+import { SiMinutemailer } from "react-icons/si";
 
 const Lastsectionimg = () => {
 
-    const series1 = [{
-        name: 'Data-1',
-        data: [1, 2, 3, 4, 5, 4, 3, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const series = [{
+        name: 'Work Done',
+        data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+    }, {
+        name: 'Pending Work',
+        data: [35, 41, 36, 26, 45, 48, 52, 53, 41]
+    }, {
+        name: 'Total Work',
+        data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+
     }]
     const options = {
         chart: {
-            height: 350,
-            type: 'line',
-            zoom: {
-                enabled: false
-            }
+            type: 'bar',
+            height: 250
+        },
+        plotOptions: {
+            bar: {
+                horizontal: false,
+                columnWidth: '75%',
+                endingShape: 'rounded',
+
+            },
         },
         dataLabels: {
             enabled: false
         },
         stroke: {
-            curve: 'smooth',
-            width: 2,
-            colors: ['#b9d4fc']
-        },
-        title: {
-            text: 'Likes',
-            align: 'left'
-        },
-        grid: {
-            xaxis: {
-                lines: {
-                    show: false
-                }
-            },
-            yaxis: {
-                lines: {
-                    show: false
-                }
-            },
+            show: true,
+            width: 5,
+            colors: ['transparent']
         },
         xaxis: {
-            labels: {
-                show: false
-            }
+            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
         },
-        yaxis: {
-            labels: {
-                show: false
-            }
+       
+        fill: {
+            opacity: 1
         },
+        tooltip: {
+            y: {
+                formatter: function (val) {
+                    return "$ " + val + " thousands"
+                }
+            }
+        }
     }
 
     return (
-        <div className='h-full w-full'>
-            <ApexCharts options={options} series={series1} type="line" height={400} />
-        </div>
+        <>
+            <div className='p-5 relative'>
+                <div className='h-full w-full bg-white p-5 shadow-lg rounded-lg '>
+                    <div className='font-semibold text-sm'>Total Work</div>
+                    <ApexCharts options={options} series={series} type="bar" height={200} />
+                </div>
+                <div className='absolute -top-2 left-32'>
+                    <StatsCard icon={<SiMinutemailer />} data={"200"} dataType={"Work"} percent={"70.86"} status={"profit"}/>
+                </div>
+                <div className='absolute bottom-36 -right-5'>
+                    <StatsCard icon={<SiMinutemailer />} data={"200"} dataType={"Work"} percent={"70.86"} status={"loss"}/>
+                </div>
+                <div className='absolute -bottom-5 -left-5'>
+                    <StatsCard icon={<SiMinutemailer />} data={"200"} dataType={"Work"} percent={"70.86"} status={"profit"}/>
+                </div>
+            </div>
+
+        </>
+
     )
 }
 

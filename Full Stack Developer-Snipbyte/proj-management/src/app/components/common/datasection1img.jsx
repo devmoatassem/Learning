@@ -106,7 +106,6 @@ const Datasection1img = () => {
                     <div className='text-xl font-semibold mb-5'>Revenue</div>
                     <div className='flex items-center gap-6'>
                         <div>
-
                             <ProfitCard title='Current Week' amount='$80,000' status="profit" css="bg-btgreen" percent="8" />
                         </div>
                         <div>

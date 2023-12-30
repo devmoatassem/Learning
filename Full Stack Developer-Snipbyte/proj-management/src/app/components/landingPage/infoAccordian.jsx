@@ -12,7 +12,7 @@ const InfoAccordian = ({ title, description, link }) => {
     setOpen(!open);
   };
   return (
-    <div className='flex items-start gap-3 p-5 shadow-lg drop-shadow-lg rounded-lg w-full border'>
+    <div className='bg-white flex items-start gap-3 p-4 shadow-lg drop-shadow-lg rounded-lg w-full border'>
       <div className='text-2xl mt-1'>
         <button onClick={handleClick}>{open ? <FaAngleUp /> : <FaAngleDown />}</button>
       </div>
