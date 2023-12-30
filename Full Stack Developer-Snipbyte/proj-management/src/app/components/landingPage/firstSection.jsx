@@ -17,7 +17,7 @@ const Section = () => {
         <div className='bg-bggrey w-full h-full py-28'>
             <div className='2xl:max-w-[1400px] mx-auto px-10 lg:px-36 flex flex-col items-center justify-center'>
                 <div className='text-btpurple font-medium py-3 mt-[20vh]'># Installing and Enjoying Process</div>
-                <div className='w-[40vw]'>
+                <div className='md:w-[40vw]'>
                     <Headers title='Save time working with Appilo Zone' description={dummy} customClass='text-bgdark-grey text-center' headingColor="text-btpurple" />
                 </div>
                 <div className='md:grid grid-cols-3 gap-6 justify-between'>

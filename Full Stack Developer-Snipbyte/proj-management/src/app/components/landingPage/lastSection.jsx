@@ -10,7 +10,7 @@ const LastSection = () => {
 
         <div className='w-full h-full py-28'>
             <div className='flex flex-col items-center justify-center px-10 lg:px-36 2xl:max-w-[1400px] mx-auto'>
-                <div className='w-[40vw]'>
+                <div className='md:w-[40vw]'>
                     <Headers title='Save time working with Appilo Zone' description={dummy} customClass='text-bgdark-grey text-center' headingColor="text-btpurple" />
                 </div>
                 <div className='md:flex w-full py-20 gap-20'>

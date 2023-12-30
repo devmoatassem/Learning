@@ -97,7 +97,7 @@ const Datasection1img = () => {
 
 
     return (
-        <div className='max-w-[500px]'>
+        <div className='max-w-[500px] px-5 md:px-0 py-20 md:py-0 mb-20 md:mb-0'>
             <div className='relative'>
                 <svg className='-z-50' viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path fill="#e4f4f3" d="M47.3,-61.3C57.5,-47.9,59.3,-29.3,62.4,-11.1C65.5,7.1,69.9,25,64.1,38.9C58.3,52.7,42.3,62.6,24.5,70.3C6.7,78,-12.9,83.7,-26.5,76.9C-40.2,70.2,-47.9,51.1,-54.7,34.1C-61.6,17,-67.7,2,-64.4,-10.5C-61.1,-22.9,-48.5,-32.9,-36.3,-45.9C-24,-59,-12,-75.1,3.3,-79.1C18.6,-83,37.1,-74.7,47.3,-61.3Z" transform="translate(100 100)" />
@@ -112,12 +112,12 @@ const Datasection1img = () => {
                             <ProfitCard title='Previous Week' amount='$3,000' status="loss" css="bg-btpink" percent="2" />
                         </div>
                     </div>
-                    <div className='lg:w-[450px] pt-5'>
+                    <div className='xl:w-[450px] pt-5'>
                         <ApexCharts options={options} series={series} type="line" height={200} />
                     </div>
                 </div>
                 {/* small chart */}
-                <div className='flex text-[#6854da] bg-white rounded-lg shadow-lg h-28 absolute pr-4 top-20 right-10  z-50'>
+                <div className='flex text-[#6854da] bg-white rounded-lg shadow-lg h-28 absolute pr-4 top-10 md:top-20 md:right-10  z-50'>
                     <div className='relative pt-5'>
                         <ApexCharts options={options1} series={series1} type="area" height={100} width={200} />
                         <div className=' absolute top-5 left-10'>
@@ -129,7 +129,7 @@ const Datasection1img = () => {
                         <span className='text-xs'>$</span>234,000
                     </div>
                 </div>
-                <div className='w-[180px] p-5 bg-white rounded-lg absolute top-3/4 left-24 shadow-lg'>
+                <div className='w-[180px] p-5 bg-white rounded-lg absolute mt-20 md:mt-0 md:top-3/4 left-24  shadow-lg'>
                     <div className='relative'>
                         <div className='absolute right-0 top-0'><BsThreeDots /></div>
                         <div className='flex flex-col items-start gap-2 justify-center'>

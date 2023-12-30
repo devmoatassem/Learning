@@ -25,7 +25,7 @@ const logos = [
 
 const brandlist = logos.map((logo,index)=>{ 
     return (
-       <Image key={index} src={logo.path} alt={logo.name} width={200} height={200} className='h-7 ' />
+       <Image key={index} src={logo.path} alt={logo.name} width={200} height={200} className='h-4 mx-auto md:h-7 my-5 lg:my-0' />
     )
 })
 
