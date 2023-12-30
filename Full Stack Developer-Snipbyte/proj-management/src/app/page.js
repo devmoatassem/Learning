@@ -82,7 +82,8 @@ const header1 ={
   description:"Eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in! dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"
 }
 
-import Section2img from "./components/common/securitysection2img";
+import Section2img from "./components/common/datasection2img";
+import Section1img from "./components/common/datasection1img";
 
 export default function Home() {
   return (
@@ -92,7 +93,7 @@ export default function Home() {
       <Section />
       {/* <ProfilesArray profiles={profiles1} /> */}
 
-      <DataSection data={datad} button={button1} logo={icon1} right={false} header={header1}/>
+      <DataSection data={datad} button={button1} logo={icon1} right={false} header={header1} img={<Section1img/>}/>
       <DataSection data={datad} button={button2} logo={icon2} right={true} header={header1} img={<Section2img/>}/>
       <DataSection data={dated2} button={button1} logo={icon3} right={false} header={header1} img={<Section2img/>}/>
       <LastSection />
