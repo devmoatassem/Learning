@@ -2,6 +2,7 @@ import React from 'react'
 import Headers from '../common/headers'
 import InfoAccordian from './infoAccordian'
 import PartnersList from './partnersList'
+import Lastsectionimg from '../common/lastsectionimg'
 
 const LastSection = () => {
     const dummy = "Eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"
@@ -14,7 +15,7 @@ const LastSection = () => {
             </div>
             <div className='md:flex w-full'>
                 <div className='md:w-1/2'>
-                    image
+                    <Lastsectionimg/>
                 </div>
                 <div className='md:w-1/2 space-y-10'>
                     <div className='w-full'>

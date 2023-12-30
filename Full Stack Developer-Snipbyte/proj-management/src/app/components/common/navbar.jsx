@@ -43,10 +43,7 @@ const Navbar = () => {
                 <div className='flex gap-6 font-inter'>
                     {navLinksList}
                 </div>
-                <div className='flex items-center gap-2 '>
-                    <Button button='Login' customClass='max-w-20 bg-white text-black' />
-                    <Button button='Register' customClass='max-w-24 bg-btpurple text-white' />
-                </div>
+                <Button button='Login' customClass='max-w-32 bg-white text-black' />
             </div>
 
         </nav>

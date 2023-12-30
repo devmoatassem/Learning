@@ -84,6 +84,7 @@ const header1 ={
 
 import Section2img from "./components/common/datasection2img";
 import Section1img from "./components/common/datasection1img";
+import Section3img from "./components/common/datasection3img";
 
 export default function Home() {
   return (
@@ -95,7 +96,7 @@ export default function Home() {
 
       <DataSection data={datad} button={button1} logo={icon1} right={false} header={header1} img={<Section1img/>}/>
       <DataSection data={datad} button={button2} logo={icon2} right={true} header={header1} img={<Section2img/>}/>
-      <DataSection data={dated2} button={button1} logo={icon3} right={false} header={header1} img={<Section2img/>}/>
+      <DataSection data={dated2} button={button1} logo={icon3} right={false} header={header1} img={<Section3img/>}/>
       <LastSection />
     </div>
       

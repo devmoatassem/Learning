@@ -14,8 +14,9 @@ module.exports = {
         'btpurple': '#2d194e',
         'bgdark-grey': '#6B6B6B',
         'btpink': '#ee3658',
+        'btblue': '#0085fe',
         'transparent': 'transparent',
-        'twitter': '#1DA1F2'
+        'nomgrey':'#eff2f9',
         
       },
       fontFamily: {

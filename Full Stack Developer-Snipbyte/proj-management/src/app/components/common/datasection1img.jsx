@@ -110,16 +110,13 @@ const Datasection1img = () => {
                             <ProfitCard title='Current Week' amount='$80,000' status="profit" css="bg-btgreen" percent="8" />
                         </div>
                         <div>
-
                             <ProfitCard title='Previous Week' amount='$3,000' status="loss" css="bg-btpink" percent="2" />
                         </div>
                     </div>
                     <div className='w-[450px] pt-5'>
                         <ApexCharts options={options} series={series} type="line"  height={200}/>
                     </div>
-
                 </div>
-
                 {/* small chart */}
                 <div className='flex text-[#6854da] bg-white rounded-lg shadow-lg h-28 absolute pr-4 top-20 right-10  z-50'>
                     <div className='relative pt-5'>
@@ -128,14 +125,11 @@ const Datasection1img = () => {
                             <div className='text font-semibold'>Projection</div>
                             <div className='text-xs font-light'>January 4th</div>
                         </div>
-
                     </div>
                     <div className='text-2xl mt-16'>
                         <span className='text-xs'>$</span>234,000
                     </div>
                 </div>
-
-
                 <div className='w-[180px] p-5 bg-white rounded-lg absolute top-3/4 left-24 shadow-lg'>
                     <div className='relative'>
                         <div className='absolute right-0 top-0'><BsThreeDots /></div>
@@ -147,16 +141,10 @@ const Datasection1img = () => {
                             <Progressbar title='Server Setup' percentage='51' date={"30/01"} />
                         </div>
                     </div>
-
                 </div>
                 <div className='w-2 h-2 bg-btpink rounded-full absolute -bottom-20 right-32'></div>
                 <div className='w-1 h-1 bg-btpink rounded-full absolute -bottom-24 right-20'></div>
             </div>
-
-
-
-
-
         </div>
 
     )
