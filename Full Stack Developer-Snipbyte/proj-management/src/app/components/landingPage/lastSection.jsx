@@ -9,7 +9,7 @@ const LastSection = () => {
     return (
 
         <div className='w-full h-full py-28'>
-            <div className='flex flex-col items-center justify-center px-36 2xl:max-w-[1400px] mx-auto'>
+            <div className='flex flex-col items-center justify-center px-10 lg:px-36 2xl:max-w-[1400px] mx-auto'>
                 <div className='w-[40vw]'>
                     <Headers title='Save time working with Appilo Zone' description={dummy} customClass='text-bgdark-grey text-center' headingColor="text-btpurple" />
                 </div>

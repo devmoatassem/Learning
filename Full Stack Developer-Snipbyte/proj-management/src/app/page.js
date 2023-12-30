@@ -94,9 +94,9 @@ export default function Home() {
       <Section />
       {/* <ProfilesArray profiles={profiles1} /> */}
 
-      <DataSection data={datad} button={button1} logo={icon1} right={false} header={header1} img={<Section1img/>}/>
-      <DataSection data={datad} button={button2} logo={icon2} right={true} header={header1} img={<Section2img/>}/>
-      <DataSection data={dated2} button={button1} logo={icon3} right={false} header={header1} img={<Section3img/>}/>
+      <DataSection data={datad} button={button1} logo={icon1} right={false} header={header1} img={<Section1img/>} bg={"bg-[#f8f9fd]"}/>
+      <DataSection data={datad} button={button2} logo={icon2} right={true} header={header1} img={<Section2img/>} bg={"bg-[#f8f9fd]"}/>
+      <DataSection data={dated2} button={button1} logo={icon3} right={false} header={header1} img={<Section3img/>} bg={"bg-[#f8f9fd]"}/>
       <LastSection />
     </div>
       

@@ -36,11 +36,11 @@ const Navbar = () => {
 
     return (
         <nav className='absolute top-0 bg-transparent w-full z-50'>
-            <div className='flex justify-between items-center h-[80px] py-8 2xl:max-w-[1400px] mx-auto px-36'>
+            <div className='flex justify-between items-center h-[80px] py-8 2xl:max-w-[1400px] mx-auto px-10 lg:px-36'>
                 <div className='text-xl font-extrabold text-white'>
                     Logo Lorem
                 </div>
-                <div className='flex gap-6 font-inter'>
+                <div className='hidden sm:flex gap-6 font-inter'>
                     {navLinksList}
                 </div>
                 <Button button='Login' customClass='max-w-32 bg-white text-black' />

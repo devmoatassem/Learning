@@ -58,7 +58,7 @@ const Lastsectionimg = () => {
     return (
         <>
             <div className='p-5 relative'>
-                <div className='h-full w-full bg-white p-5 shadow-lg rounded-lg '>
+                <div className='h-full w-full bg-[#fcfbff] p-5 shadow-lg rounded-lg '>
                     <div className='font-semibold text-sm'>Total Work</div>
                     <ApexCharts options={options} series={series} type="bar" height={200} />
                 </div>

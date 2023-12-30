@@ -49,7 +49,7 @@ const Footer = () => {
 
     return (
         <footer className=' py-10 w-full'>
-            <div className='2xl:max-w-[1400px] mx-auto px-36'>
+            <div className='2xl:max-w-[1400px] mx-auto px-10 lg:px-36'>
                 <div className='flex items-start justify-between w-full gap-10'>
                     <div className='flex flex-col items-start space-y-10 w-1/4'>
                         <div className='text-xl font-extrabold text-btgreen'>

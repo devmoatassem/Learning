@@ -6,7 +6,7 @@ const VerticalProfile = () => {
     return (
         <div className='flex flex-col gap-3 items-center w-40 relative bg-white rounded-lg shadow-lg px-2 py-3'>
             <div className='absolute -top-5'>
-                <Image src='/2.png' width={50} height={50} className='rounded-full object-cover aspect-square' />
+                <Image alt='abc' src='/2.png' width={50} height={50} className='rounded-full object-cover aspect-square' />
             </div>
             <div className='text-center mt-10'>
                 <div className='text-sm font-semibold '>Ralph Edwards</div>

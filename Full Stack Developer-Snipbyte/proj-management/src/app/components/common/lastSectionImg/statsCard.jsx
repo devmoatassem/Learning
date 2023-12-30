@@ -2,7 +2,7 @@ import React from 'react'
 
 const StatsCard = ({ icon, data, dataType, percent, status }) => {
   return (
-    <div className='flex items-center justify-center w-fit gap-3 p-2 rounded-lg bg-white shadow-lg'>
+    <div className='flex items-center justify-center w-fit gap-3 p-2 rounded-lg bg-[#fcfbff] shadow-lg'>
       <div className='text-lg rounded-full aspect-square bg-btgreen text-white p-1.5'>{icon}</div>
       <div className='w-20'>
         <div className='font-semibold'>{`${data}k`}</div>

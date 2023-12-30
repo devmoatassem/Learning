@@ -3,7 +3,7 @@ import Image from 'next/image'
 const Profile = ({bgcolor,circle,name}) => {
   return (
     <div className='flex items-center gap-3 py-3 px-5 bg-white rounded-lg shadow-lg'>
-        <Image src='/12.png' width={40} height={40} className={'rounded-full object-cover aspect-square '+bgcolor} />
+        <Image alt='abc' src='/12.png' width={40} height={40} className={'rounded-full object-cover aspect-square '+bgcolor} />
         <div className='w-full'>
             <div>{name}</div>
             <div className=' rounded-full h-2  bg-nomgrey'></div>
