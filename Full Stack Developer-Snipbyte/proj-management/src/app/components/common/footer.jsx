@@ -50,8 +50,8 @@ const Footer = () => {
     return (
         <footer className=' py-10 w-full'>
             <div className='2xl:max-w-[1400px] mx-auto px-10 lg:px-36'>
-                <div className='flex items-start justify-between w-full gap-10'>
-                    <div className='flex flex-col items-start space-y-10 w-1/4'>
+                <div className='md:flex items-start justify-between w-full gap-10'>
+                    <div className='flex flex-col items-start space-y-10 w-full md:w-2/4'>
                         <div className='text-xl font-extrabold text-btgreen'>
                             Logo Lorem
                         </div>
@@ -59,20 +59,22 @@ const Footer = () => {
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi eligendi molestiae consectetur numquam. Quas perspiciatis adipisci quod blanditiis earum perferendis ratione quaerat, quidem vitae nesciunt quam vero quo aperiam esse.
                         </div>
                     </div>
-                    <div>
-                        <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
-                    </div>
-                    <div>
-                        <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
-                    </div>
-                    <div>
-                        <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
+                    <div className='w-full flex items-center justify-between py-16 md:py-0'>
+                        <div>
+                            <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
+                        </div>
+                        <div>
+                            <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
+                        </div>
+                        <div>
+                            <FooterLinks title={footerLinks[0].title} links={footerLinks[0].links} />
+                        </div>
                     </div>
                     <div className='space-y-5'>
                         <div className='text-lg font-bold whitespace-nowrap'>
                             Follow Us
                         </div>
-                        <div className='flex items-center justify-between gap-4'>
+                        <div className='flex items-center gap-4'>
                             {socialLinksList}
                         </div>
                     </div>
