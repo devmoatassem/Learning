@@ -1,7 +1,7 @@
 import React from 'react'
-import Lazyloading from './section3img/lazyloading'
-import VerticalProfile from './section3img/verticalProfile'
-import Profile from './section3img/profile'
+import Lazyloading from '../section3img/lazyloading'
+import VerticalProfile from '../section3img/verticalProfile'
+import Profile from '../section3img/profile'
 
 const Datasection3img = () => {
     return (

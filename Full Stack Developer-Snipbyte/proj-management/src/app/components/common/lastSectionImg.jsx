@@ -2,7 +2,7 @@
 import dynamic from 'next/dynamic';
 const ApexCharts = dynamic(() => import('react-apexcharts'), { ssr: false });
 import React from 'react'
-import StatsCard from './lastSectionImg/statsCard';
+import StatsCard from '../lastSectionImg/statsCard';
 import { SiMinutemailer } from "react-icons/si";
 
 const Lastsectionimg = () => {
