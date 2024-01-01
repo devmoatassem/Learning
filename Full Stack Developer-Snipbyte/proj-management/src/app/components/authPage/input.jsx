@@ -13,7 +13,7 @@ const Input = ({ label, type, placeholder, formType, name, register, err }) => {
                 : null
             }</label>
             <div className='relative'>
-            <input {...register(name)} type={type==="password"?showPassword?"text":type:type} placeholder={placeholder} className='bg-white border w-full p-2 rounded-lg shadow-sm placeholder:text-sm' />
+            <input {...register(name)} type={type==="password"?showPassword?"text":type:type} placeholder={placeholder} className={'bg-white border w-full p-2 rounded-lg shadow-sm placeholder:text-sm outline-none '+(err[name]?" outline-btpink border-none":"")} />
             {type === "password" ?
                 <div className='absolute top-1/3 right-2 text-bgdark-grey'>
                     {showPassword? <FaEye onClick={()=>setShowPassword(!showPassword)} /> : <FaEyeSlash onClick={()=>setShowPassword(!showPassword)} />}
