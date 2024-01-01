@@ -6,6 +6,9 @@ import { FcGoogle } from "react-icons/fc";
 import { FaMicrosoft } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
 import '../common/custom.css'
+import { useForm } from 'react-hook-form';
+import { formValidation } from './formValidation.js';
+import { yupResolver } from "@hookform/resolvers/yup"
 
 const socialIcons = [
     <FcGoogle />,
@@ -20,6 +23,17 @@ const AuthForm = () => {
 
     })
     const [formType, setFormType] = useState('login')
+
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+    } = useForm({
+        resolver: yupResolver(formValidation),
+    })
+    const onSubmit = data => console.log(data);
+
+
     return (
         <div className='flex flex-col items-center px-10 py-5'>
             <div className='text-xl font-extrabold py-5'>Logo SnipByte</div>
@@ -28,19 +42,18 @@ const AuthForm = () => {
                 <button onClick={() => setFormType("register")} className={(formType === "register" ? "bg-btgreen text-white " : "") + " py-1.5 text-bgdark-grey rounded-lg m-0.5"}>Register</button>
             </div>
             <div className='w-full mt-5'>
-                <form action="" className='space-y-2'>
+                <form onSubmit={handleSubmit(onSubmit)} className='space-y-2' key={formType}>
                     {formType === "register" ?
                         <div className='md:flex gap-2'>
-                            <Input type='text' placeholder='First Name' label={"First Name"} />
-                            <Input type='text' placeholder='Last Name' label={"Last Name"} />
+                            <Input type='text' placeholder='First Name' label={"First Name"} name={"firstname"} register={register} err={errors}/>
+                            <Input type='text' placeholder='Last Name' label={"Last Name"} name={"lastname"}  register={register} err={errors}/>
                         </div>
                         : null}
-                    <Input type='text' placeholder='Email' label={"Email"} />
-                    <Input type='password' placeholder='Password' label={"Password"} formType={formType} />
+                    <Input type='text' placeholder='Email' label={"Email"} name={"email"}  register={register} err={errors}/>
+                    <Input type='password' placeholder='Password' label={"Password"} formType={formType} name={"password"}  register={register} err={errors}/>
                     {formType === "register" ?
-                         <Input type='password' placeholder='Confirm Password' label={"Confirm Password"} formType={formType}/>
+                        <Input type='password' placeholder='Confirm Password' label={"Confirm Password"} formType={formType} name={"confirmpassword"}  register={register} err={errors}/>
                         : null}
-                    <div className='py-1'>Errors</div>
                     <Button button={formType === "register" ? "Create Account" : "Sign In"} type="submit" customClass='w-full bg-btgreen rounded-lg text-white' />
                 </form>
             </div>
