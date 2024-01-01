@@ -1,7 +1,7 @@
 import React from 'react'
 import Intro from '../components/authPage/intro'
 import AuthForm from '../components/authPage/authForm'
-import Input from '../components/authPage/input'
+
 
 const Page = () => {
     return (
@@ -9,7 +9,7 @@ const Page = () => {
             <div className='w-2/3 h-full'>
                 <Intro />
             </div>
-            <div className='w-1/3 h-full'>
+            <div className='w-1/3 h-full overflow-auto'>
                 <AuthForm />
             </div>
         </div>
