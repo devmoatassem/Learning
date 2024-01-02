@@ -2,7 +2,7 @@ import React from 'react'
 import Headers from '../common/headers'
 import QualitiesCard from '../common/qualitiesCard'
 import Button from '../common/button'
-import ProfilesArray from './profilesArray'
+import ProfilesArray from '../common/profilesArray'
 
 const DataSection = ({ right, logo, img, header, data, button, bg }) => {
 

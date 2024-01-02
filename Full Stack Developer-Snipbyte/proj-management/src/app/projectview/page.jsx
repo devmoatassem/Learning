@@ -2,8 +2,8 @@
 import React from 'react'
 import Header from '../components/projectView/header';
 import Breadcrumb from '../components/projectView/breadcrumb';
-import ProjectCard from '../components/projectView/projectCard';
-import Column from '../components/projectView/column';
+
+
 
 
 
@@ -11,19 +11,17 @@ import Column from '../components/projectView/column';
 import Home from "../components/projectView/other/Home";
 import { Provider } from 'react-redux';
 import store from '../components/projectView/other/redux/store';
+import ProjectBoard from '../components/projectView/projectBoard';
 
 const Page = () => {
   return (
-    // <Provider store={store}>
-<>
-<Header/>
-<Breadcrumb/>
-<ProjectCard/>
-<Column/>
+    <>
+      <Header />
+      <Breadcrumb />
+      <ProjectBoard />
+    </>
 
-</>
-       
-        // {/* </Provider> */}
+
   )
 }
 
