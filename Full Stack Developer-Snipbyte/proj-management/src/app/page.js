@@ -82,9 +82,9 @@ const header1 ={
   description:"Eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in! dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"
 }
 
-import Section2img from "./components/common/datasection2img";
-import Section1img from "./components/common/datasection1img";
-import Section3img from "./components/common/datasection3img";
+import Section2img from "./components/landingPage/section2img/datasection2img";
+import Section1img from "./components/landingPage/section1img/datasection1img";
+import Section3img from "./components/landingPage/section3img/datasection3img";
 
 export default function Home() {
   return (

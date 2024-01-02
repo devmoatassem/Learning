@@ -2,7 +2,7 @@ import React from 'react'
 import Headers from '../common/headers'
 import InfoAccordian from './infoAccordian'
 import PartnersList from './partnersList'
-import Lastsectionimg from '../common/lastSectionImg'
+import Lastsectionimg from './lastSectionImg/lastSectionImg'
 
 const LastSection = () => {
     const dummy = "Eveniet labore officia odit mollitia fugit facere reprehenderit dicta reiciendis doloribus laudantium, minus laborum aut deleniti in!"

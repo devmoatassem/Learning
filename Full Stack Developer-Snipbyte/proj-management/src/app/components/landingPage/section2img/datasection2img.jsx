@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import '../common/custom.css'
+import '../../../../styles/custom.css'
 import { FaRegBell } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
 
@@ -45,8 +45,8 @@ const Section2img = () => {
 
                 <div className='w-2 h-2 bg-btgreen rounded-full absolute top-20 left-10'></div>
                 <div className='w-1 h-1 bg-btgreen rounded-full absolute top-36 right-2'></div>
-                <div className='w-1 h-1 bg-btgreen rounded-full absolute top-32 right-6'></div> 
-                <div className='w-1 h-1 bg-btgreen rounded-full absolute top-40 right-5'></div> 
+                <div className='w-1 h-1 bg-btgreen rounded-full absolute top-32 right-6'></div>
+                <div className='w-1 h-1 bg-btgreen rounded-full absolute top-40 right-5'></div>
             </div>
 
 
@@ -54,4 +54,4 @@ const Section2img = () => {
     )
 }
 
-export default Section2img
+export default Section2img;
