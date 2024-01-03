@@ -1,8 +1,27 @@
 import React from "react";
 import { IoCalendarOutline } from "react-icons/io5";
 import Image from "next/image";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
-const ProjectCard = ({ proj: { type, name, dueDate, client, developers } }) => {
+const ProjectCard = ({
+  project: { type, title, dueDate, client, developers },
+  id,
+}) => {
+  const {
+    attributes,
+    listeners,
+    setNodeRef,
+    transform,
+    transition,
+    isDragging,
+  } = useSortable({
+    id: id,
+    data: {
+      type: "item",
+    },
+  });
+
   const assignedDevelopers = developers.map((developer, index) => {
     return (
       <div key={index} className="flex items-center gap-1">
@@ -28,18 +47,32 @@ const ProjectCard = ({ proj: { type, name, dueDate, client, developers } }) => {
       </div>
     );
   });
+
   return (
-    <div className="space-y-3 rounded-md border-2 p-5" draggable>
-      <div className="flex items-center gap-2">{types}</div>
-      <div className="mt-3 text-xl font-semibold">{name}</div>
-      <div className="flex items-center gap-2 text-sm text-bgdark-grey">
-        <IoCalendarOutline /> Due Date : {dueDate}
+   
+      <div
+        ref={setNodeRef}
+        {...attributes}
+        style={{
+          transition,
+          transform: CSS.Translate.toString(transform),
+        }}
+        {...listeners}
+        className="space-y-3 rounded-md border-2 p-5 w-full"
+      >
+        <div className="flex items-center gap-2">{types}</div>
+        <div className="mt-3 text-xl font-semibold">{title}</div>
+        <div className="flex items-center gap-2 text-sm text-bgdark-grey">
+          <IoCalendarOutline /> Due Date : {dueDate}
+        </div>
+        <div className="text-xs text-bgdark-grey">
+          <span>{client.name}</span>- <span>{client.location}</span>
+        </div>
+        <div className="flex flex-row flex-wrap gap-2">
+          {assignedDevelopers}
+        </div>
       </div>
-      <div className="text-xs text-bgdark-grey">
-        <span>{client.name}</span>- <span>{client.location}</span>
-      </div>
-      <div className="flex flex-row flex-wrap gap-2">{assignedDevelopers}</div>
-    </div>
+ 
   );
 };
 
