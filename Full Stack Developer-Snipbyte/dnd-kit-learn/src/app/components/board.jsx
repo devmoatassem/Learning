@@ -3,6 +3,7 @@ import React from "react";
 import Column from "./column";
 import Project from "./project";
 import { useState } from "react";
+import { projects } from "./tempdata";
 
 import {
   DndContext,
@@ -347,7 +348,7 @@ const Board = () => {
   return (
     <div className="bg-black text-white">
       <div>This is board and below we have columns</div>
-      <div className="grid grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-6 bg-white">
         <DndContext
           sensors={sensors}
           collisionDetection={closestCorners}
