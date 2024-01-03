@@ -1,29 +1,46 @@
-import React from 'react'
+import React from "react";
 import { IoCalendarOutline } from "react-icons/io5";
-import Image from 'next/image'
+import Image from "next/image";
 
-const ProjectCard = () => {
+const ProjectCard = ({ proj: { type, name, dueDate, client, developers } }) => {
+  const assignedDevelopers = developers.map((developer, index) => {
+    return (
+      <div key={index} className="flex items-center gap-1">
+        <Image
+          alt="abc"
+          src={developer.img}
+          width={20}
+          height={20}
+          className={"aspect-square rounded-full object-cover"}
+        />
+        <div className="text-xs font-semibold">{developer.name}</div>
+      </div>
+    );
+  });
+
+  const types = type.map((typ, index) => {
+    return (
+      <div
+        key={index}
+        className=" rounded-md bg-purple-50 px-2 py-1 text-xs  font-semibold text-purple-400"
+      >
+        {typ}
+      </div>
+    );
+  });
   return (
-    <div className='space-y-3 p-5 border-2 rounded-md'>
-      <div className="flex items-center">
-        <div className='text-purple-400 bg-purple-50 px-2 py-1 text-xs  font-semibold rounded-md'>App-Type</div>
-
+    <div className="space-y-3 rounded-md border-2 p-5" draggable>
+      <div className="flex items-center gap-2">{types}</div>
+      <div className="mt-3 text-xl font-semibold">{name}</div>
+      <div className="flex items-center gap-2 text-sm text-bgdark-grey">
+        <IoCalendarOutline /> Due Date : {dueDate}
       </div>
-      <div className='mt-3 text-xl font-semibold'>Project Name</div>
-      <div className="flex items-center gap-2 text-bgdark-grey text-sm">
-        <IoCalendarOutline /> Due Date : 14 Aug 2021
+      <div className="text-xs text-bgdark-grey">
+        <span>{client.name}</span>- <span>{client.location}</span>
       </div>
-      <div className='text-bgdark-grey text-xs'>
-        <span>Client name </span>- <span>Client Location</span>
-      </div>
-      <div>
-        <div className='flex items-center gap-1'>
-          <Image alt='abc' src={'/1.webp'} width={20} height={20} className={'rounded-full aspect-square object-cover'} />
-          <div className='text-xs font-semibold'>Developer Name</div>
-        </div>
-      </div>
+      <div className="flex flex-row flex-wrap gap-2">{assignedDevelopers}</div>
     </div>
-  )
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;
