@@ -3,7 +3,7 @@ import { FaRegBell } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 const Header = () => {
   return (
-    <div className="flex items-center justify-between border-b px-5 py-5">
+    <div className="mx-auto flex w-full items-center justify-between border-b px-10 py-5 py-5 lg:px-36 2xl:max-w-[1400px]">
       <div className="relative w-[500px]">
         <input
           type="text"

@@ -34,7 +34,7 @@ const Column = ({ id, children, title, size, addProject }) => {
         transform: CSS.Translate.toString(transform),
       }}
       {...listeners}
-      className="flex w-full flex-col gap-5 rounded-lg border p-5 "
+      className="flex w-full flex-col gap-5 rounded-lg border bg-white p-5"
     >
       <div className="flex items-center justify-between px-2 py-4">
         <div className="flex items-center gap-2">
@@ -50,7 +50,7 @@ const Column = ({ id, children, title, size, addProject }) => {
       </div>
       <div
         onClick={addProject}
-        className="flex cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-blue-300 bg-blue-50 py-3 text-blue-500"
+        className="flex cursor-pointer items-center justify-center rounded-lg border-2 border-dashed border-btpurple bg-purple-50 py-3 text-btpurple"
       >
         <FaPlus />
       </div>

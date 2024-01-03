@@ -8,8 +8,10 @@ const Page = () => {
   return (
     <>
       <Header />
-      <Breadcrumb />
-      <ProjectBoard />
+      <div className="bg-[#f8f9fd]">
+        <Breadcrumb />
+        <ProjectBoard />
+      </div>
     </>
   );
 };

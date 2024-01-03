@@ -27,7 +27,7 @@ export const profiles = {
 export const projects = [
   {
     id: "container-1",
-    categorty: "New Projects",
+    categorty: "In Progress",
     projects: [
       {
         id: "project-1",
@@ -159,7 +159,7 @@ export const projects = [
   },
   {
     id: "container-3",
-    categorty: "New Projects",
+    categorty: "Completed Projects",
     projects: [
       {
         id: "project-9",

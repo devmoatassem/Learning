@@ -273,8 +273,8 @@ const ProjectBoard = () => {
 
   //   /////////////////////////////////////////////////////////////////////////////////////////////////
   return (
-    <div className="mx-auto w-full px-10 lg:px-36 py-5 2xl:max-w-[1400px]">
-      <div className="grid grid-cols-3 gap-6">
+    <div className="mx-auto w-full px-10 py-5 lg:px-36 2xl:max-w-[1400px]">
+      <div className="grid gap-6 lg:grid-cols-3">
         <DndContext
           sensors={sensors}
           collisionDetection={closestCorners}
@@ -288,6 +288,7 @@ const ProjectBoard = () => {
                 key={container.id}
                 title={container.categorty}
                 id={container.id}
+                size={container.projects.length}
               >
                 <SortableContext items={container.projects.map((i) => i.id)}>
                   <div className="flex flex-col items-start gap-3">
@@ -306,12 +307,3 @@ const ProjectBoard = () => {
 };
 
 export default ProjectBoard;
-
-//  <div className="grid grid-cols-4 gap-4">
-//   {/* <Column projList={projects1} />
-//         <Column projList={projects2} /> */}
-
-//   {/* <div className='h-96 w-[300px] border-2 border-dashed border-blue-300 bg-blue-50 flex items-center justify-center rounded-lg text-blue-500'>
-//             <FaPlus />
-//         </div> */}
-// </div>
