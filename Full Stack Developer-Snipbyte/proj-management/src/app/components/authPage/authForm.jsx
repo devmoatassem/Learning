@@ -1,11 +1,11 @@
 "use client";
 import React, { useState } from 'react'
-import Input from './input';
+import Input from '../common/input';
 import Button from '../common/button';
 import { FcGoogle } from "react-icons/fc";
 import { FaMicrosoft } from "react-icons/fa6";
 import { FaApple } from "react-icons/fa";
-import '../common/custom.css'
+// import '../common/custom.css'
 import { useForm } from 'react-hook-form';
 import { regVal, loginVal } from './formValidationSchema.js';
 import { yupResolver } from "@hookform/resolvers/yup"

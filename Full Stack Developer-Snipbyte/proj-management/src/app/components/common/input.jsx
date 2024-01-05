@@ -2,7 +2,7 @@
 import React,{useState} from 'react'
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-const Input = ({ label, type, placeholder, formType, name, register, err }) => {
+const Input = ({ label, type, placeholder, formType, name, register, err="none" }) => {
     
     const [showPassword, setShowPassword] = useState(false)
     return (
@@ -13,13 +13,13 @@ const Input = ({ label, type, placeholder, formType, name, register, err }) => {
                 : null
             }</label>
             <div className='relative'>
-            <input {...register(name)} type={type==="password"?showPassword?"text":type:type} placeholder={placeholder} className={'bg-white border w-full p-2 rounded-lg shadow-sm placeholder:text-sm outline-none '+(err[name]?" outline-btpink border-none":"")} />
-            {type === "password" ?
-                <div className='absolute top-1/3 right-2 text-bgdark-grey'>
-                    {showPassword? <FaEye onClick={()=>setShowPassword(!showPassword)} /> : <FaEyeSlash onClick={()=>setShowPassword(!showPassword)} />}
-                </div>
-                : null
-            }
+                <input {...(register ? register(name) : null)} type={type==="password" ? showPassword ? "text" : type : type} placeholder={placeholder} className={`bg-white border border-gray-200 w-full p-2 rounded-lg shadow-sm placeholder:text-sm outline-none ${err && err[name] ? "outline-btpink border-none" : ""}`} />
+                {type === "password" ?
+                    <div className='absolute top-1/3 right-2 text-bgdark-grey'>
+                        {showPassword? <FaEye onClick={()=>setShowPassword(!showPassword)} /> : <FaEyeSlash onClick={()=>setShowPassword(!showPassword)} />}
+                    </div>
+                    : null
+                }
             </div>
             
             <p className='text-xs text-btpink capitalize'>{err[name]?.message}</p>

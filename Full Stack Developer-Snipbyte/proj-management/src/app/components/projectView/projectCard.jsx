@@ -24,7 +24,7 @@ const ProjectCard = ({
 
   const assignedDevelopers = developers.map((developer, index) => {
     return (
-      <div key={index} className="flex items-center gap-1">
+      <div key={index} className="flex items-center gap-1 ">
         <Image
           alt="abc"
           src={developer.img}
@@ -58,7 +58,7 @@ const ProjectCard = ({
           transform: CSS.Translate.toString(transform),
         }}
         {...listeners}
-        className="space-y-3 rounded-md border-2 p-5 w-full"
+        className={"space-y-3 rounded-md border-2 p-5 w-full bg-white " +(isDragging ? " shadow-lg opacity-50" : "")}
       >
         <div className="flex items-center gap-2">{types}</div>
         <div className="mt-3 text-xl font-semibold">{title}</div>
