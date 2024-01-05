@@ -1,10 +1,6 @@
 import { arrayMove } from "@dnd-kit/sortable";
 
-export const findValueOfItems = (
-  id,
-  type,
-  containers,
-) => {
+export const findValueOfItems = (id, type, containers) => {
   if (type === "container") {
     return containers.find((item) => item.id === id);
   }
