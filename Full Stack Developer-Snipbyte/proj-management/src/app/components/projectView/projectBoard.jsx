@@ -434,7 +434,20 @@ const ProjectBoard = () => {
               </Column>
             ))}
           </SortableContext>
-          
+          <DragOverlay>
+            {activeId ? (
+              <ProjectCard
+                key={activeId}
+                id={activeId}
+                project={
+                  findValueOfItems(activeId, "item")?.projects.find(
+                    (item) => item.id === activeId,
+                  )
+                }
+                isDragging={true}
+              />
+            ) : null}
+            </DragOverlay>
         </DndContext>
       </div>
     </div>
