@@ -14,6 +14,7 @@ module.exports = {
       },
       colors: {
         bgSlate: "#0b1121",
+        bgSlateLight: "#131a34",
       },
     },
   },
