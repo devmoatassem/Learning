@@ -5,7 +5,7 @@ import { GoArrowUpRight } from "react-icons/go";
 
 const HeroVisual = () => {
   return (
-    <div className="relative h-96 bg-bgSlateLight rounded-3xl my-20">
+    <div className="relative lg:h-96 h-full bg-bgSlateLight rounded-3xl my-20">
       <div className="hero-bg absolute inset-0 h-full w-full"></div>
       <Image
         src={"/woman-with-robot-head.png"}
@@ -14,7 +14,7 @@ const HeroVisual = () => {
         alt="Women robot"
         className="absolute bottom-0 right-0 w-[500px] h-[300px]]"
       />
-      <div className="mx-10 py-10 space-y-10 z-50">
+      <div className="mx-10 py-10 space-y-10 z-50 pb-80">
         <div className="relative">
           <div className="overflow-clip absolute text-clip bg-orange-600 text-3xl p-2 rounded-full">
             <GoArrowUpRight />
@@ -30,7 +30,7 @@ const HeroVisual = () => {
           </div>
         </div>
 
-        <div className="max-w-[500px] text-gray-200 font-light tracking-widest leading-relaxed">
+        <div className="max-w-[500px] text-gray-200 font-light tracking-widest leading-relaxed ">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
           reiciendis velit vero architecto quam rem qui iusto dolorem soluta,
           facere alias enim.

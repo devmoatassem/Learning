@@ -8,16 +8,16 @@ import LifeCycleImg from "./lifeCycleImg";
 const LifeCycleSec = () => {
   return (
     <div className="mx-auto w-full space-y-10">
-      <div className="flex items-start justify-between">
-        <div className="max-w-[60%]">
+      <div className="md:flex items-start justify-between">
+        <div className="lg:max-w-[60%]">
           <SectionTitle />
         </div>
-        <div className="w-[40%]">
+        <div className="lg:w-[40%]">
           <LinePattern />
         </div>
       </div>
-      <div className="flex items-start justify-between">
-        <div className="max-w-[60%]">
+      <div className="md:flex items-start justify-between">
+        <div className="lg:max-w-[60%]">
           <SectionDescrption/>
         </div>
         <div>
